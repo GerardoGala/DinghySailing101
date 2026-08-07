@@ -1,353 +1,218 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 
-    <title>
+<title>
 
-        Certificate of Completion
+Certificate of Completion
 
-    </title>
+</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400;600&display=swap"
-          rel="stylesheet">
+<style>
 
-    <style>
+body {
 
-        body {
+    background:#f5f5f5;
 
-            background: #e9ecef;
+    font-family:Inter,sans-serif;
 
-            font-family: "Inter", sans-serif;
+}
 
-            padding: 30px;
+.certificate {
 
-        }
+    max-width:900px;
 
-        .certificate {
+    margin:40px auto;
 
-            width: 210mm;
+    background:white;
 
-            min-height: 297mm;
+    border:12px solid #d4af37;
 
-            margin: auto;
+    padding:60px;
 
-            background: #fffef8;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
 
-            border: 12px solid #0d6efd;
+}
 
-            outline: 2px solid #d4af37;
+h1{
 
-            outline-offset: -18px;
+    font-family:Cinzel,serif;
 
-            padding: 50px;
+    font-size:3rem;
 
-            box-shadow: 0 0 30px rgba(0,0,0,.15);
+    color:#8b6b00;
 
-            position: relative;
+}
 
-        }
+h2{
 
-        .university {
+    font-family:Cinzel,serif;
 
-            font-family: "Cinzel", serif;
+}
 
-            font-size: 2.4rem;
+.student{
 
-            font-weight: 700;
+    font-size:2rem;
 
-            text-align: center;
+    font-weight:600;
 
-            color: #0d3b66;
+    color:#0d6efd;
 
-        }
+    margin:40px 0;
 
-        .campus {
+}
 
-            text-align: center;
+.footer{
 
-            font-size: 1.1rem;
+    margin-top:80px;
 
-            margin-bottom: 40px;
+}
 
-        }
+.signature{
 
-        .title {
+    border-top:1px solid #444;
 
-            font-family: "Cinzel", serif;
+    display:inline-block;
 
-            text-align: center;
+    padding-top:8px;
 
-            font-size: 2.8rem;
+    min-width:250px;
 
-            color: #0d3b66;
+}
 
-            margin-bottom: 35px;
+@media (max-width:768px){
 
-        }
+.certificate{
 
-        .presented {
+    padding:30px;
 
-            text-align: center;
+    margin:10px;
 
-            font-size: 1.2rem;
+}
 
-        }
+h1{
 
-        .student {
+    font-size:2rem;
 
-            text-align: center;
+}
 
-            font-family: "Great Vibes", cursive;
+.student{
 
-            font-size: 3.4rem;
+    font-size:1.5rem;
 
-            color: #198754;
+}
 
-            margin: 35px 0;
+}
 
-        }
-
-        .course {
-
-            text-align: center;
-
-            font-size: 2rem;
-
-            font-weight: 700;
-
-            color: #0d6efd;
-
-            margin: 30px 0;
-
-        }
-
-        .description {
-
-            text-align: center;
-
-            font-size: 1.15rem;
-
-            line-height: 1.8;
-
-        }
-
-        .seal {
-
-            text-align: center;
-
-            font-size: 90px;
-
-            color: #d4af37;
-
-            margin: 40px 0;
-
-        }
-
-        .footer {
-
-            margin-top: 70px;
-
-        }
-
-        .signature {
-
-            text-align: center;
-
-        }
-
-        .line {
-
-            border-top: 1px solid #000;
-
-            width: 220px;
-
-            margin: auto;
-
-            margin-bottom: 10px;
-
-        }
-
-        #controls {
-
-            text-align: center;
-
-            margin-bottom: 25px;
-
-        }
-
-        @media print {
-
-            body {
-
-                background: white;
-
-                padding: 0;
-
-            }
-
-            #controls {
-
-                display: none;
-
-            }
-
-            .certificate {
-
-                box-shadow: none;
-
-                margin: 0;
-
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
 <body>
 
-<div id="controls">
+<div class="certificate text-center">
 
-    <button
-        class="btn btn-primary">
-
-        <i class="bi bi-download"></i>
-
-        Download Certificate
-
-    </button>
-
-</div>
-
-<div class="certificate">
-
-    <div class="university">
+    <h2>
 
         Misamis University
 
-    </div>
+    </h2>
 
-    <div class="campus">
+    <h5>
 
         Laiya-Aplaya Extension
 
-    </div>
+    </h5>
 
-    <div class="title">
+    <br>
+
+    <h1>
 
         Certificate of Completion
 
-    </div>
+    </h1>
 
-    <p class="presented">
+    <br>
+
+    <p class="lead">
 
         This certifies that
 
     </p>
 
-    <div
-        id="studentName"
-        class="student">
+    <div class="student">
 
-        Student Name
+        Juan Dela Cruz
 
     </div>
 
-    <p class="description">
+    <p class="lead">
 
-        has successfully completed the online course
+        has successfully completed the course
 
     </p>
 
-    <div class="course">
+    <h2>
 
         Dinghy Sailing 101
 
-    </div>
+    </h2>
 
-    <p class="description">
+    <br>
 
-        and has demonstrated a satisfactory understanding of
-        the fundamental principles of dinghy sailing.
+    <p>
 
-    </p>
+        Awarded this
 
-    <div class="seal">
+        <strong>
 
-        <i class="bi bi-award-fill"></i>
+            7th day of August 2026
 
-    </div>
-
-    <p
-        id="completionDate"
-        class="text-center fs-5">
-
-        Date
+        </strong>
 
     </p>
 
     <div class="row footer">
 
-        <div class="col-6 signature">
+        <div class="col">
 
-            <div class="line"></div>
-
-            <strong>
+            <div class="signature">
 
                 Gerardo Gala
 
-            </strong>
+            </div>
 
-            <br>
+            <p>
 
-            Instructor
+                Instructor
 
-        </div>
-
-        <div class="col-6 signature">
-
-            <div class="line"></div>
-
-            <strong>
-
-                Misamis University
-
-            </strong>
-
-            <br>
-
-            Laiya-Aplaya Extension
+            </p>
 
         </div>
 
     </div>
 
 </div>
-
-<script src="js/certificate.js"></script>
 
 </body>
 
