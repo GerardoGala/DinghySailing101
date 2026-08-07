@@ -12,6 +12,8 @@ let currentQuestion = 0;
 let correctAnswers = 0;
 let wrongAnswers = 0;
 
+let missedQuestions = [];
+
 //----------------------------------------------------
 // Utility
 //----------------------------------------------------
@@ -123,6 +125,18 @@ function showQuestion() {
 
     //------------------------------------------------
 
+    const progress = document.createElement("p");
+
+    progress.className = "text-muted";
+
+    progress.innerHTML =
+        `Correct: <strong>${correctAnswers}</strong> &nbsp;&nbsp;
+         Wrong: <strong>${wrongAnswers}</strong>`;
+
+    container.appendChild(progress);
+
+    //------------------------------------------------
+
     const question = document.createElement("p");
 
     question.className = "lead";
@@ -169,6 +183,16 @@ function answerQuestion(choice) {
 
         wrongAnswers++;
 
+        missedQuestions.push({
+
+            question: q.question,
+
+            correctAnswer: q.choices[q.answer],
+
+            explanation: q.explanation
+
+        });
+
     }
 
     currentQuestion++;
@@ -196,7 +220,7 @@ function showFinalScore() {
     const passed =
         score >= PASSING_SCORE;
 
-    container.innerHTML = `
+    let html = `
 
         <div class="alert ${passed ? "alert-success" : "alert-danger"}">
 
@@ -217,6 +241,13 @@ function showFinalScore() {
 
             <p>
 
+                Wrong:
+                ${wrongAnswers}
+
+            </p>
+
+            <p>
+
                 Score:
                 ${score}%
 
@@ -231,6 +262,69 @@ function showFinalScore() {
         </div>
 
     `;
+
+    //------------------------------------------------
+    // Show missed questions ONLY if passed
+    //------------------------------------------------
+
+    if (passed && missedQuestions.length > 0) {
+
+        html += `
+
+            <h3 class="mt-5">
+
+                Questions to Review
+
+            </h3>
+
+            <p>
+
+                Congratulations on passing! Here are the questions you missed.
+                Reviewing them will strengthen your understanding.
+
+            </p>
+
+        `;
+
+        missedQuestions.forEach((item, index) => {
+
+            html += `
+
+                <div class="card shadow-sm mb-3">
+
+                    <div class="card-body">
+
+                        <h5>
+
+                            ${index + 1}. ${item.question}
+
+                        </h5>
+
+                        <p>
+
+                            <strong>Correct Answer:</strong>
+
+                            ${item.correctAnswer}
+
+                        </p>
+
+                        <p>
+
+                            ${item.explanation}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+    container.innerHTML = html;
 
 }
 
@@ -261,8 +355,8 @@ function showFailEarly() {
 
             <p>
 
-                Since a maximum of three incorrect answers is allowed to achieve
-                an 80% passing score, the quiz has ended.
+                Since a maximum of three incorrect answers is allowed
+                to achieve an 80% passing score, the quiz has ended.
 
             </p>
 
@@ -285,6 +379,12 @@ function showFailEarly() {
                 FAIL
 
             </h4>
+
+            <p class="mt-3">
+
+                Please review the course modules and try again.
+
+            </p>
 
         </div>
 
