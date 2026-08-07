@@ -40,7 +40,7 @@ function initializeNavigation() {
 
     nextButton.href =
         moduleNumber === 10
-            ? "quiz.html"
+            ? "Quiz.html"
             : `module${String(moduleNumber + 1).padStart(2, "0")}.html`;
 }
 
