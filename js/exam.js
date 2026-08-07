@@ -6,7 +6,8 @@
 const PASSING_SCORE = 80;
 const QUESTIONS_PER_MODULE = 2;
 const MAX_WRONG = 4;
-let examQuestions = [];
+
+let examQuestion = [];
 
 let currentQuestion = 0;
 let correctAnswers = 0;
@@ -44,7 +45,7 @@ async function loadExam() {
 
     const data = await response.json();
 
-    examQuestions = [];
+    examQuestion = [];
 
     data.modules.forEach(module => {
 
@@ -54,7 +55,7 @@ async function loadExam() {
 
         questions.forEach(question => {
 
-            quizQuestions.push({
+            examQuestion.push({
 
                 module: module.module,
                 title: module.title,
@@ -73,7 +74,7 @@ async function loadExam() {
 
     });
 
-    examQuestions = shuffle(examQuestions);
+    examQuestion = shuffle(examQuestion);
 
     showQuestion();
 
@@ -100,7 +101,7 @@ function showQuestion() {
 
     //------------------------------------------------
 
-    if (currentQuestion >= quizQuestions.length) {
+    if (currentQuestion >= examQuestion.length) {
 
         showFinalScore();
 
@@ -110,7 +111,7 @@ function showQuestion() {
 
     //------------------------------------------------
 
-    const q = examQuestions[currentQuestion];
+    const q = examQuestion[currentQuestion];
 
     container.innerHTML = "";
 
@@ -119,7 +120,7 @@ function showQuestion() {
     const title = document.createElement("h3");
 
     title.textContent =
-        `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+        `Question ${currentQuestion + 1} of ${examQuestion.length}`;
 
     container.appendChild(title);
 
@@ -171,7 +172,7 @@ function showQuestion() {
 
 function answerQuestion(choice) {
 
-    const q = examQuestions[currentQuestion];
+    const q = examQuestion[currentQuestion];
 
     if (choice === q.answer) {
 
@@ -213,7 +214,7 @@ function showFinalScore() {
     const score =
         Math.round(
             correctAnswers /
-            examQuestions.length *
+            examQuestion.length *
             100
         );
 
@@ -258,7 +259,7 @@ if (certificateButton) {
                 Correct:
                 ${correctAnswers}
                 /
-                ${examQuestions.length}
+                ${examQuestion.length}
 
             </p>
 
@@ -352,6 +353,8 @@ if (certificateButton) {
 }
 
 //----------------------------------------------------
+// Early Fail
+//----------------------------------------------------
 
 function showFailEarly() {
 
@@ -415,4 +418,4 @@ function showFailEarly() {
 
 //----------------------------------------------------
 
-loadQuiz();
+loadExam();
