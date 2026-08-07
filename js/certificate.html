@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Certificate of Completion
+
+    </title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        body {
+
+            background: #e9ecef;
+
+            font-family: "Inter", sans-serif;
+
+            padding: 30px;
+
+        }
+
+        .certificate {
+
+            width: 210mm;
+
+            min-height: 297mm;
+
+            margin: auto;
+
+            background: #fffef8;
+
+            border: 12px solid #0d6efd;
+
+            outline: 2px solid #d4af37;
+
+            outline-offset: -18px;
+
+            padding: 50px;
+
+            box-shadow: 0 0 30px rgba(0,0,0,.15);
+
+            position: relative;
+
+        }
+
+        .university {
+
+            font-family: "Cinzel", serif;
+
+            font-size: 2.4rem;
+
+            font-weight: 700;
+
+            text-align: center;
+
+            color: #0d3b66;
+
+        }
+
+        .campus {
+
+            text-align: center;
+
+            font-size: 1.1rem;
+
+            margin-bottom: 40px;
+
+        }
+
+        .title {
+
+            font-family: "Cinzel", serif;
+
+            text-align: center;
+
+            font-size: 2.8rem;
+
+            color: #0d3b66;
+
+            margin-bottom: 35px;
+
+        }
+
+        .presented {
+
+            text-align: center;
+
+            font-size: 1.2rem;
+
+        }
+
+        .student {
+
+            text-align: center;
+
+            font-family: "Great Vibes", cursive;
+
+            font-size: 3.4rem;
+
+            color: #198754;
+
+            margin: 35px 0;
+
+        }
+
+        .course {
+
+            text-align: center;
+
+            font-size: 2rem;
+
+            font-weight: 700;
+
+            color: #0d6efd;
+
+            margin: 30px 0;
+
+        }
+
+        .description {
+
+            text-align: center;
+
+            font-size: 1.15rem;
+
+            line-height: 1.8;
+
+        }
+
+        .seal {
+
+            text-align: center;
+
+            font-size: 90px;
+
+            color: #d4af37;
+
+            margin: 40px 0;
+
+        }
+
+        .footer {
+
+            margin-top: 70px;
+
+        }
+
+        .signature {
+
+            text-align: center;
+
+        }
+
+        .line {
+
+            border-top: 1px solid #000;
+
+            width: 220px;
+
+            margin: auto;
+
+            margin-bottom: 10px;
+
+        }
+
+        #controls {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+        }
+
+        @media print {
+
+            body {
+
+                background: white;
+
+                padding: 0;
+
+            }
+
+            #controls {
+
+                display: none;
+
+            }
+
+            .certificate {
+
+                box-shadow: none;
+
+                margin: 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="controls">
+
+    <button
+        class="btn btn-primary">
+
+        <i class="bi bi-download"></i>
+
+        Download Certificate
+
+    </button>
+
+</div>
+
+<div class="certificate">
+
+    <div class="university">
+
+        Misamis University
+
+    </div>
+
+    <div class="campus">
+
+        Laiya-Aplaya Extension
+
+    </div>
+
+    <div class="title">
+
+        Certificate of Completion
+
+    </div>
+
+    <p class="presented">
+
+        This certifies that
+
+    </p>
+
+    <div
+        id="studentName"
+        class="student">
+
+        Student Name
+
+    </div>
+
+    <p class="description">
+
+        has successfully completed the online course
+
+    </p>
+
+    <div class="course">
+
+        Dinghy Sailing 101
+
+    </div>
+
+    <p class="description">
+
+        and has demonstrated a satisfactory understanding of
+        the fundamental principles of dinghy sailing.
+
+    </p>
+
+    <div class="seal">
+
+        <i class="bi bi-award-fill"></i>
+
+    </div>
+
+    <p
+        id="completionDate"
+        class="text-center fs-5">
+
+        Date
+
+    </p>
+
+    <div class="row footer">
+
+        <div class="col-6 signature">
+
+            <div class="line"></div>
+
+            <strong>
+
+                Gerardo Gala
+
+            </strong>
+
+            <br>
+
+            Instructor
+
+        </div>
+
+        <div class="col-6 signature">
+
+            <div class="line"></div>
+
+            <strong>
+
+                Misamis University
+
+            </strong>
+
+            <br>
+
+            Laiya-Aplaya Extension
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/certificate.js"></script>
+
+</body>
+
+</html>
