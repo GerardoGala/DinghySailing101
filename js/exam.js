@@ -359,7 +359,7 @@ if (certificateButton) {
 function showFailEarly() {
 
     const container =
-        document.getElementById("quizContainer");
+        document.getElementById("examContainer");
 
     container.innerHTML = `
 
