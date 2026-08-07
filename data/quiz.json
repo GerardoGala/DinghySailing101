@@ -1,0 +1,247 @@
+{
+    "passingScore": 80,
+
+    "modules": [
+
+        {
+            "module": 1,
+            "title": "Introduction to Sailing",
+
+            "questions": [
+
+                {
+                    "question": "What is the primary source of power for a sailboat?",
+
+                    "choices": [
+                        "Engine",
+                        "Wind",
+                        "Current",
+                        "Waves"
+                    ],
+
+                    "answer": 1,
+
+                    "explanation": "A sailboat is powered by the wind."
+                }
+
+            ]
+        },
+
+        {
+            "module": 2,
+            "title": "Points of Sail",
+
+            "questions": [
+
+                {
+                    "question": "Can a sailboat sail directly into the wind?",
+
+                    "choices": [
+                        "Yes",
+                        "No",
+                        "Only in strong winds",
+                        "Only while racing"
+                    ],
+
+                    "answer": 1,
+
+                    "explanation": "A sailboat must tack to make progress upwind."
+                }
+
+            ]
+        },
+
+        {
+            "module": 3,
+            "title": "Parts of a Dinghy",
+
+            "questions": [
+
+                {
+                    "question": "Which part of a dinghy is primarily used for steering?",
+
+                    "choices": [
+                        "Centerboard",
+                        "Boom",
+                        "Rudder",
+                        "Mast"
+                    ],
+
+                    "answer": 2,
+
+                    "explanation": "The rudder steers the boat."
+                }
+
+            ]
+        },
+
+        {
+            "module": 4,
+            "title": "Tacking",
+
+            "questions": [
+
+                {
+                    "question": "During a tack, the boat turns its bow...", 
+
+                    "choices": [
+                        "Through the wind",
+                        "Away from the wind",
+                        "Toward the dock",
+                        "Around a buoy"
+                    ],
+
+                    "answer": 0,
+
+                    "explanation": "A tack turns the bow through the wind."
+                }
+
+            ]
+        },
+
+        {
+            "module": 5,
+            "title": "Gybing",
+
+            "questions": [
+
+                {
+                    "question": "During a gybe, the stern passes...", 
+
+                    "choices": [
+                        "Through the wind",
+                        "Into the wind",
+                        "Across the dock",
+                        "Over the centerboard"
+                    ],
+
+                    "answer": 0,
+
+                    "explanation": "A gybe turns the stern through the wind."
+                }
+
+            ]
+        },
+
+        {
+            "module": 6,
+            "title": "Sail Trim",
+
+            "questions": [
+
+                {
+                    "question": "Proper sail trim mainly helps improve...", 
+
+                    "choices": [
+                        "Boat speed",
+                        "Boat weight",
+                        "Water depth",
+                        "Hull length"
+                    ],
+
+                    "answer": 0,
+
+                    "explanation": "Correct sail trim improves the boat's performance."
+                }
+
+            ]
+        },
+
+        {
+            "module": 7,
+            "title": "Safety",
+
+            "questions": [
+
+                {
+                    "question": "What safety equipment should always be worn while sailing?",
+
+                    "choices": [
+                        "Helmet",
+                        "Personal Flotation Device (PFD)",
+                        "Harness",
+                        "Wetsuit"
+                    ],
+
+                    "answer": 1,
+
+                    "explanation": "A properly fitted PFD should always be worn."
+                }
+
+            ]
+        },
+
+        {
+            "module": 8,
+            "title": "Capsize Recovery",
+
+            "questions": [
+
+                {
+                    "question": "After capsizing, what should you do first?",
+
+                    "choices": [
+                        "Swim to shore",
+                        "Stay with the boat",
+                        "Lower the sail",
+                        "Remove the rudder"
+                    ],
+
+                    "answer": 1,
+
+                    "explanation": "Stay calm and remain with your boat."
+                }
+
+            ]
+        },
+
+        {
+            "module": 9,
+            "title": "Launching",
+
+            "questions": [
+
+                {
+                    "question": "Before launching, what should you check first?",
+
+                    "choices": [
+                        "Wind direction",
+                        "Hull color",
+                        "Sail number",
+                        "Compass heading"
+                    ],
+
+                    "answer": 0,
+
+                    "explanation": "Always assess the wind before launching."
+                }
+
+            ]
+        },
+
+        {
+            "module": 10,
+            "title": "Landing",
+
+            "questions": [
+
+                {
+                    "question": "As you approach shallow water, what should you do?",
+
+                    "choices": [
+                        "Trim the sail harder",
+                        "Raise the centerboard and rudder",
+                        "Increase speed",
+                        "Move to the bow"
+                    ],
+
+                    "answer": 1,
+
+                    "explanation": "Raise the centerboard and rudder before they strike the bottom."
+                }
+
+            ]
+        }
+
+    ]
+}
