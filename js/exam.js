@@ -233,6 +233,9 @@ if (certificateButton) {
     if (passed) {
 
         certificateButton.classList.remove("d-none");
+        certificateButton.onclick = () => {
+        window.location.href = "student.html";
+    };
 
     }
 
@@ -419,3 +422,5 @@ function showFailEarly() {
 //----------------------------------------------------
 
 loadExam();
+
+
