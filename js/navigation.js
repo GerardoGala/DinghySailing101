@@ -19,8 +19,8 @@ function initializeNavigation() {
         return;
     }
 
-    // Quiz
-    if (currentPage === "quiz.html") {
+    // exam
+    if (currentPage === "exam.html") {
 
         previousButton.href = "module10.html";
         nextButton.href = "index.html";
@@ -40,7 +40,7 @@ function initializeNavigation() {
 
     nextButton.href =
         moduleNumber === 10
-            ? "Quiz.html"
+            ? "exam.html"
             : `module${String(moduleNumber + 1).padStart(2, "0")}.html`;
 }
 
