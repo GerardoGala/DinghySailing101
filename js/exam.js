@@ -5,7 +5,7 @@
 
 const PASSING_SCORE = 80;
 const QUESTIONS_PER_MODULE = 2;
-const MAX_WRONG = 4;
+const MAX_WRONG = 3;
 
 let examQuestion = [];
 let currentQuestion = 0;
@@ -48,7 +48,7 @@ async function loadExam() {
             });
         });
     });
-    examQuestion = shuffle(examQuestion);
+    examQuestion = shuffle(examQuestion).slice(0, 10);
     showQuestion();
 }
 
