@@ -1,10 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 
 const studentId = params.get("studentId");
-console.log(studentId);
+const studentName = params.get("studentName");
 const startButton = document.getElementById("startButton");
 
 if (studentId && studentId !== "0") {
-    console.log("studentId is passed");
+    document.getElementById("studentName").textContent = studentName || "Student";
     startButton.classList.remove("d-none");
 }
