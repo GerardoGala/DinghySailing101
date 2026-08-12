@@ -1,10 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 
-const studentId = params.get("studentId");
-const studentName = params.get("studentName");
+const studentEmail = params.get("studentEmail");
 const startButton = document.getElementById("startButton");
 
-if (studentId && studentId !== "0") {
-    document.getElementById("studentName").textContent = studentName || "Student";
+if (studentEmail !== "0") {
+    document.getElementById("studentEmail").textContent = studentEmail || "StudentEmail";
     startButton.classList.remove("d-none");
 }
